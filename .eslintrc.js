@@ -15,6 +15,16 @@ module.exports = {
     node: true,
     jest: true,
   },
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx', '.js'],
+    },
+    'import/resolver': {
+      typescript: {
+        project: resolve(__dirname, 'tsconfig.json'),
+      },
+    },
+  },
   ignorePatterns: ['.eslintrc.js'],
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
